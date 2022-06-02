@@ -1,0 +1,96 @@
+common_name,life_stage,comments,phylum,class,order,family,genus,species,dry_weight,dry_reference,carbon_weight,carbon_reference,wet_weight,wet_weight_reference,length_group
+Acanthocyclops,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,Acanthocyclops,vernalis,5.7,Nobriga 1998,3,Kimmerer (MEPS 2006),3.82e-5,POD Fish Guts,NA
+Acanthomysis aspera,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,Acanthomysis,aspera,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Acanthomysis hwanhaiensis,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,Acanthomysis,hwanhaiensis,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Acanthomysis macropsis,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,Acanthomysis,macropsis,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Acartia copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Acartia,spp.,1.49,"Carbon weight is 42% of dry weight, Beers (1966)",0.625,Kimmerer (MEPS 2006),1.14e-5,Wet = Kimmerer (2006) ((0.625 ug C * 0.000001) / 0.42) / 0.13,NA
+Acartia spp.,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Acartia,spp.,14,POD Fish Guts,2.5,Kimmerer (MEPS 2006),7.19e-5,POD Fish Guts,NA
+Acartiella,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Acartiella,sinensis,12.5,POD Fish Guts,3,Kimmerer (MEPS 2006),7.53e-5,POD Fish Guts,NA
+Acartiella copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Acartiella,NA,3.76,POD Fish Guts,0.75,Kimmerer (MEPS 2006),2.77e-5,POD Fish Guts,NA
+Annelid worms,All,NA,Annelida,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Weight not quantified. Found as parasite, not food.",NA
+Asplanchna,All,NA,Rotifera,Monogononta,Ploima,Asplanchnidae,Asplanchna,spp.,0.16,Nobriga 1998,0.3,Kimmerer (MEPS 2006),3.6e-6,POD Fish Guts; From Other rotifer,NA
+barnacle nauplii,Nauplii,NA,Arthropoda,Cirripedia,Sessilia,NA,NA,NA,2.5,POD Fish Guts,NA,NA,1.39e-5,POD Fish Guts,NA
+Bosmina,All,NA,Arthropoda,Branchiopoda,Cladocera,NA,Bosmina,longirostris,1.5,Nobriga 1998,1.4,Kimmerer (MEPS 2006),6.9e-6,POD Fish Guts,NA
+calanoid copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,NA,NA,3,Nobriga 1998,0.625,Kimmerer (MEPS 2006),1.38e-5,POD Fish Guts,NA
+Ceriodaphnia,All,NA,Arthropoda,Branchiopoda,Cladocera,NA,Ceriodaphnia,spp.,3.88,POD Fish Guts,1.4,Kimmerer (MEPS 2006),3.23e-5,POD Fish Guts,NA
+Chironomid larvae,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,19.68,POD Fish Guts,NA,NA,1.64e-4,POD Fish Guts,NA
+Clams,All,NA,Mollusca,Bivalvia,NA,NA,NA,NA,4,POD Fish Guts,0.1,Kimmerer (MEPS 2006),3.34e-5,POD Fish Guts,NA
+copepod nauplii,Nauplii,NA,Arthropoda,Copepoda,NA,NA,NA,NA,0.25,Nobriga 1998,0.1,Kimmerer (MEPS 2006),2.4e-6,POD Fish Guts,NA
+Corophium type,All,"All ""Corophium"" shaped amphipods",Arthropoda,Malacostraca,Amphipoda,Corophiidae,Corophium,spp.,29.57,POD Fish Guts,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Amphipods
+crab zoea,Zoea,NA,Arthropoda,Malacostraca,Decapoda,NA,NA,NA,3.36,POD Fish Guts - Delta smelt only,NA,NA,2.96e-5,POD Fish Guts,NA
+Crangon,All,NA,Arthropoda,Malacostraca,Decapoda,Caridae,Crangon,spp.,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Shrimp
+Cumaceans,All,"Stopped using after July 2020 and separted Cumaceans into Nippoleucon hinumensis, Other Cumaceans and Unid Cumaceans",Arthropoda,Malacostraca,Cumacea,NA,NA,NA,39.68,POD Fish Guts,NA,NA,3.307e-4,POD Fish Guts,Cumaceans
+cyclopoid copepodid,Copepodid,NA,Arthropoda,Copepoda,Cyclopoida,NA,NA,NA,0.89,Nobriga 1998,0.75,Kimmerer (MEPS 2006),1.37e-5,Wet = Kimmerer (2006) ((0.75 ug C * 0.000001) / 0.42) / 0.13,NA
+Daphnia,All,NA,Arthropoda,Branchiopoda,Cladocera,NA,Daphnia,spp.,5.01,Nobriga 1998,2.8,Kimmerer (MEPS 2006),5.04e-5,POD Fish Guts,NA
+Debris (sand/silt/mud),"NA",Number = 1 (presence only),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Weight not quantified.,NA
+Deltamysis homquistae,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,Deltamysis,homquistae,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Diaphanosoma,All,NA,Arthropoda,Branchiopoda,Cladocera,NA,Diaphanosoma,spp.,2.04,Nobriga 1998,1.4,Kimmerer (MEPS 2006),2.83e-5,POD Fish Guts,NA
+Diaptomus copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Diaptomus,spp.,3,Nobriga 1998,0.625,Kimmerer (MEPS 2006),1.14e-5,Wet = Kimmerer (2006) ((0.625 ug C * 0.000001) / 0.42) / 0.13,NA
+Diaptomus spp.,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Diaptomus,spp.,7.86,Nobriga 1998,4,Kimmerer (MEPS 2006),7.33e-5,Wet = Kimmerer (2006) ((4 ug C * 0.000001) / 0.42) / 0.13,NA
+Eurytemora copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Eurytemora,affinis,3,Nobriga 1998,0.55,Kimmerer (MEPS 2006),1.01e-5,Wet = Kimmerer (2006) ((0.55 ug C * 0.000001) / 0.42) / 0.13,NA
+Eurytemora nauplii,Nauplii,NA,Arthropoda,Copepoda,Calanoida,NA,Eurytemora,spp.,0.24,"Carbon weight is 42% of dry weight, Beers (1966)",0.1,Kimmerer (MEPS 2006),1.8e-6,Wet = Kimmerer (2006) ((0.1 ug C * 0.000001) / 0.42) / 0.13,NA
+Eurytemora spp.,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Eurytemora,affinis,6.13,Nobriga 1998,2.2,Kimmerer (MEPS 2006),4.03e-5,Wet = Kimmerer (2006) ((2.2 ug C * 0.000001) / 0.42) / 0.13,NA
+Exopalaemon modestus,All,Added 24 Mar 2014,Arthropoda,Malacostraca,Decapoda,Palaemonidae,Exopalaemon,modestus,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Shrimp
+fish eggs,All,NA,Chordata,NA,NA,NA,NA,NA,NA,NA,NA,NA,2.23e-5,POD Fish Guts,NA
+Gammarus type,All,"All ""Gammarus"" shaped amphipods",Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,spp.,10,POD Fish Guts - Delta smelt only,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Amphipods
+Harpacticoids,JuvAdult,NA,Arthropoda,Copepoda,Harpacticoida,NA,NA,NA,2.23,Nobriga 1998,1,Kimmerer (MEPS 2006),2.27e-5,POD Fish Guts,NA
+Hyperacanthomysis longirostris,All,Formerly Acanthomysis bowmani,Arthropoda,Malacostraca,Mysidacea,NA,Hyperacanthomysis,longirostris,95,POD Fish Guts,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Isopods,All,NA,Arthropoda,Malacostraca,Isopoda,NA,NA,NA,64,POD Fish Guts,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Isopods
+Keratella,All,NA,Rotifera,Monogononta,Ploima,Brachionidae,Keratella,spp.,0.16,Nobriga 1998,0.03,Kimmerer (MEPS 2006),1.3e-6,POD Fish Guts,NA
+Limnoithona juvenile,Copepodid,NA,Arthropoda,Copepoda,Cyclopoida,NA,Limnothoina,spp.,0.1,Orsi unpublished,0.0275,Kimmerer (MEPS 2006),5e-7,Wet = Kimmerer (2006) ((0.0275 ug C * 0.000001) / 0.42) / 0.13,NA
+Limnoithona spp.,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,Limnothoina,spp.,0.75,POD Fish Guts,0.11,Kimmerer (MEPS 2006),5.6e-6,POD Fish Guts,NA
+Longfin smelt,All,NA,Chordata,Actinopterygii,Osmeriformes,Osmeridae,Spirinchus,thaleichthys,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Neomysis kadiakensis,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,Neomysis,kadiakensis,434,POD Fish Guts,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Neomysis mercedis,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,Neomysis,mercedis,653,POD Fish Guts,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+Nippoleucon hinumensis,All,Added for ease of data entry Jan 2018. Used weights from Cumaceans,Arthropoda,Malacostraca,Cumacea,Leuconidae,Nippoleucon,hinmensis,39.68,POD Fish Guts,NA,NA,3.307e-4,POD Fish Guts,Cumaceans
+Oithona davisae,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,Oithona,davisae,0.6,Bryant and Arnold 2007,0.23,Kimmerer (MEPS 2006),4.2e-6,Wet = Kimmerer (2006) ((0.23 ug C * 0.000001) / 0.42) / 0.13,NA
+Oithona juvenile,Copepodid,"March 4, 2014 corrected carbon value 0.575 ug -> 0.0575 ug",Arthropoda,Copepoda,Cyclopoida,NA,Oithona,spp.,NA,NA,0.0575,Kimmerer (MEPS 2006),1.1e-6,Wet = Kimmerer (2006) ((0.0575 ug C * 0.000001) / 0.42) / 0.13,NA
+Oithona similis,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,Oithona,similis,0.6,Bryant and Arnold 2007,0.5,Kimmerer (MEPS 2006),9.2e-6,Wet = Kimmerer (2006) ((0.5 ug C * 0.000001) / 0.42) / 0.13,NA
+Oithona spp.,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,Oithona,spp.,NA,NA,0,NA,6.6e-6,Wet = Kimmerer (2006); Average from Oithona davisae and similis,NA
+Osphranticum,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Osphranticum,labronectum,NA,NA,NA,NA,3.66e-5,POD Fish Guts; From UnID calanoid,NA
+Ostracods,All,NA,Arthropoda,Ostacoda,NA,NA,NA,NA,7.91,POD Fish Guts,10,Anke,4.81e-5,POD Fish Guts,NA
+Other calanoid,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,NA,NA,2.34,POD Fish Guts,2,Kimmerer (MEPS 2006),3.66e-5,Wet = Kimmerer (2006) ((2 ug C * 0.000001) / 0.42) / 0.13,NA
+Other cladocera,All,Cladocera neonates count as individuals,Arthropoda,Branchiopoda,Cladocera,NA,NA,NA,3.61,POD Fish Guts,1.6,POD Fish,3.01e-5,POD Fish Guts,NA
+Other Cumacean,All,Added 29 July 2020,Arthropoda,Malacostraca,Cumacea,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Other cyclopoid,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,NA,NA,5.39,POD Fish Guts,1,Kimmerer (MEPS 2006),4.44e-5,POD Fish Guts,NA
+Other Insect larvae,NA,NA,Arthropoda,Insecta,NA,NA,NA,NA,58,POD Fish Guts,NA,NA,4.904e-4,POD Fish Guts,NA
+Other malacostraca,All,NA,Arthropoda,Malacostraca,Malacostraca,NA,NA,NA,NA,NA,NA,NA,4.94e-4,POD Fish Guts,NA
+Other rotifer,All,NA,Rotifera,Monogononta,Ploima,NA,NA,NA,0.16,Nobriga 1998,0.03,Kimmerer (MEPS 2006),3.6e-6,POD Fish Guts,NA
+Other zooplankton,All,NA,NA,NA,NA,NA,NA,NA,11.27,POD Fish Guts,NA,NA,9.39e-5,POD Fish Guts,NA
+Pacific herring,All,NA,Chordata,Actinopterygii,Clupeiformes,Clupeidae,Clupea,pallasii,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Palaemon,All,NA,Arthropoda,Malacostraca,Decapoda,Palaemonidae,Palaemon,macrodactylus,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Shrimp
+Polyarthra,All,NA,Rotifera,Monogononta,Ploima,Synchaetidae,Polyarthra,spp.,0.16,Nobriga 1998,0.03,Kimmerer (MEPS 2006),5e-7,Wet = Kimmerer (2006) ((0.03 ug C * 0.000001) / 0.42) / 0.13,NA
+Prickly sculpin,All,NA,Chordata,Actinopterygii,Scorpaeniformes,Cottidae,Cottus,asper,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Pseudodiaptomus copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Pseudodiaptomus,spp.,3,Nobriga 1998,0.75,Kimmerer (MEPS 2006),1.37e-5,Wet = Kimmerer (2006) ((0.75 ug C * 0.000001) / 0.42) / 0.13,NA
+Pseudodiaptomus euryhalinus,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Pseudodiaptomus,euryhalinus,NA,NA,NA,NA,1.94e-5,POD Fish Guts; from Pseudodiaptomus spp.,NA
+Pseudodiaptomus forbesi,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Pseudodiaptomus,forbesi,10.6,Nobriga 1998,3,Kimmerer (MEPS 2006),5.49e-5,Wet = Kimmerer (2006) ((3 ug C * 0.000001) / 0.42) / 0.13,NA
+Pseudodiaptomus marinus,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Pseudodiaptomus,marinus,9.52,"Carbon weight is 42% of dry weight, Beers (1966)",4,Kimmerer (MEPS 2006),7.33e-5,Wet = Kimmerer (2006) ((4 ug C * 0.000001) / 0.42) / 0.13,NA
+Pseudodiaptomus nauplii,Nauplii,NA,Arthropoda,Copepoda,Calanoida,NA,Pseudodiaptomus,spp.,0.24,"Carbon weight is 42% of dry weight, Beers (1966)",0.1,Kimmerer (MEPS 2006),1.8e-6,Wet = Kimmerer (2006) ((0.1 ug C * 0.000001) / 0.42) / 0.13,NA
+Pseudodiaptomus spp.,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Pseudodiaptomus,spp.,2.47,POD Fish Guts,1,POD Fish,1.94e-5,POD Fish Guts,NA
+Sinocalanus,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Sinocalanus,doerrii,7.38,Nobriga 1998,3,Kimmerer (MEPS 2006),7.07e-5,POD Fish Guts,NA
+Sinocalanus copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Sinocalanus,NA,1.79,"Carbon weight is 42% of dry weight, Beers (1966)",0.75,Kimmerer (MEPS 2006),2.36e-5,POD Fish Guts,NA
+Sinocalanus nauplii,Nauplii,NA,Arthropoda,Copepoda,Calanoida,NA,Sinocalanus,NA,0.24,"Carbon weight is 42% of dry weight, Beers (1966)",0.1,Kimmerer (MEPS 2006),2.7e-6,POD Fish Guts,NA
+Stomach empty,"NA",Number = 1 (presence only),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Weight not quantified.,NA
+Striped bass,All,NA,Chordata,Actinopterygii,Perciformes,Moronidae,Morone,saxatilis,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Synchaeta,All,NA,Rotifera,Monogononta,Ploima,Synchaetidae,Synchaeta,spp.,0.16,Nobriga 1998,0.1,Kimmerer (MEPS 2006),3.6e-6,POD Fish Guts; From Other rotifer,NA
+Synchaeta bicornis,All,NA,Rotifera,Monogononta,Ploima,Synchaetidae,Synchaeta,bicornis,0.16,Nobriga 1998,0.1,Kimmerer (MEPS 2006),1.8e-6,Wet = Kimmerer (2006) ((0.1 ug C * 0.000001) / 0.42) / 0.13,NA
+Terrestrial invertebrates,All,"Ants, spiders, flies with wings, etc.",NA,NA,NA,NA,NA,NA,28,POD Fish Guts,NA,NA,2.366e-4,POD Fish Guts,NA
+Tintinnid spp.,All,Added 25 May 2011,Ciliophora,Spirotrichea,Tintinnida,NA,NA,NA,NA,NA,0,NA,1.5e-7,Wet = Pace et al. (1998) (( 0.0197 ug DW * 0.000001) / 0.13),NA
+Tortanus,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,Tortanus,spp.,16.67,"Carbon weight is 42% of dry weight, Beers (1966)",7,Kimmerer (MEPS 2006),2.196e-4,POD Fish Guts,NA
+Tortanus copepodid,Copepodid,NA,Arthropoda,Copepoda,Calanoida,NA,Tortanus,spp.,3,Nobriga 1998,0.75,Kimmerer (MEPS 2006),3.01e-5,POD Fish Guts,NA
+Tortanus dextrilobatus,Adult,ID'd only to Tortanus spp.,Arthropoda,Copepoda,Calanoida,NA,Tortanus,dextrilobatus,NA,NA,0,NA,2.196e-4,POD Fish Guts; from Tortanus,NA
+Tortanus discaudatus,Adult,ID'd only to Tortanus spp.,Arthropoda,Copepoda,Calanoida,NA,Tortanus,discaudatus,NA,NA,0,NA,2.196e-4,POD Fish Guts; from Tortanus,NA
+Trichocerca,All,NA,Rotifera,Monogononta,Ploima,Trichocercidae,Trichocerca,spp.,0.16,Nobriga 1998,NA,NA,2.3e-6,POD Fish Guts,NA
+Tridentiger spp.,All,NA,Chordata,Actinopterygii,Perciformes,Gobiidae,Tridentiger,spp.,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Unid Amphipod,All,Added 9 Nov 2011,Arthropoda,Malacostraca,Amphipoda,NA,NA,NA,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Amphipods
+UnID animal material,"NA",Number = 1 (presence only),NA,NA,NA,NA,NA,NA,100,POD Fish Guts - Delta smelt only,NA,NA,NA,Weight not quantified.,NA
+UnID calanoid,Adult,NA,Arthropoda,Copepoda,Calanoida,NA,NA,NA,3,Nobriga 1998,3,POD Fish,2.76e-5,POD Fish Guts,NA
+UnID cladocera,All,NA,Arthropoda,Branchiopoda,Cladocera,NA,NA,NA,2.7,POD Fish Guts,1.4,Kimmerer (MEPS 2006),2.25e-5,POD Fish Guts,NA
+Unid copepod,All,"March 4, 2014 corrected d mean weight 29.7 -> 24.7",Arthropoda,Copepoda,NA,NA,NA,NA,NA,NA,0,NA,2.47e-5,POD Fish Guts; Mean of UnID calanoid and UnID cyclopoid,NA
+UnID cyclopoid,Adult,NA,Arthropoda,Copepoda,Cyclopoida,NA,NA,NA,2.6,POD Fish Guts,NA,NA,2.17e-5,POD Fish Guts,NA
+Unid fish,All,NA,Chordata,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Unid Mysids,All,NA,Arthropoda,Malacostraca,Mysidacea,NA,NA,NA,228,POD Fish Guts,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Mysids
+UnID plant material,"NA",Number = 1 (presence only),NA,NA,NA,NA,NA,NA,13,POD Fish Guts - Delta smelt only,NA,NA,NA,Weight not quantified.,NA
+Unid rotifer,All,NA,Rotifera,Monogononta,Ploima,NA,NA,NA,0.16,Nobriga 1998,0.03,Kimmerer (MEPS 2006),3.6e-6,POD Fish Guts; From Other rotifer,NA
+White croaker,All,NA,Chordata,Actinopterygii,Perciformes,Sciaenidae,Genyonemus,lineatus,NA,NA,NA,NA,NA,"See ""tbl_lookup_Zoo LW Equations""",Fish
+Worm pieces,All,Number = 1 (presence only),NA,NA,NA,NA,NA,NA,NA,NA,0,NA,1.39e-5,POD Fish Guts; From barnacle nauplii (same size),NA

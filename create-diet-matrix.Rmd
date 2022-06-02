@@ -1,0 +1,444 @@
+---
+title: "Diet Matrix"
+author: "Jeanette Clark"
+date: '2022-05-20'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning = FALSE, message = FALSE}
+library(readxl)
+library(readr)
+library(janitor)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(DT)
+library(stringr)
+```
+
+## Read in data
+
+Read in DOP diet data, clean up the names, parse dates (there are some inconsistent formats), add a database column so we can distinguish the source later, and rename a column for consistency.
+
+```{r}
+dop_diet <- read_csv("raw_files/DOP Delta Smelt Diet by Number to Post.csv", show_col_types = F) %>%
+    clean_names() %>%
+    mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
+    mutate(database = "DOP") %>%
+    rename(log_number = dop_log_number)
+```
+
+Read in FLaSH diet data with same steps as above.
+
+```{r}
+flash_diet <- read_csv("raw_files/FLaSH 2011 to 2020 Delta Smelt Diet by Number to Post.csv", show_col_types = F) %>%
+    clean_names() %>%
+    mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
+    rename(log_number = f_la_sh_log_number) %>%
+    mutate(database = "FLaSH") %>%
+    mutate(log_number = str_pad(as.character(log_number), pad = "0", width = 4, side = "left")) %>% 
+  mutate(station = as.character(station))
+```
+
+Read in the DOP presence/absence data. We do the same cleaning steps, plus remove a bunch of columns that already exist in the diet matrix data for DOP.
+
+```{r}
+dop_pa <- read_csv("raw_files/DOP Delta Smelt Presence-Absence Categories.csv", show_col_types = F) %>%
+    clean_names() %>%
+    mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
+    mutate(database = "DOP") %>%
+    rename(log_number = dop_log_number) %>%
+    select(-project, -gear_type, -year, -month, -date, -station, -region, -species, -time, -depth, -temp_surf, -cond_surf, -ppt_surf, -temp_bott, -cond_bott, -ppt_bott, -secchi, -turbidity)
+```
+
+Read in FLaSH presence/absence data, with same initial cleaning steps. Also pre-process the worm pieces column so that NA's are turned into 0 and 1s are retained.
+
+```{r}
+flash_pa <- read_csv("raw_files/FLaSH Delta Smelt Presence-Absence Categories.csv", show_col_types = F) %>%
+    clean_names() %>%
+    mutate(database = "FLaSH") %>%
+    mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
+    rename(log_number = f_la_sh_log_number) %>%
+    mutate(log_number = str_pad(as.character(log_number), pad = "0", width = 4, side = "left")) %>%
+    mutate(worm_pieces = ifelse(is.na(worm_pieces), 0, 1))
+```
+
+Read in FLaSH empties dataset with same initial processing steps as above.
+
+```{r}
+flash_empties <- read_csv("raw_files/FLaSH 2011 to 2020 Delta Smelt Empties to Post.csv", show_col_types = F) %>%
+    clean_names()  %>%
+    mutate(database = "FLaSH") %>%
+    mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
+    rename(log_number = f_la_sh_log_number) %>%
+    mutate(log_number = str_pad(as.character(log_number), pad = "0", width = 4, side =    "left")) %>%
+    mutate(serial_number = as.character(serial_number))
+
+```
+
+Create a list of id columns which will be helpful later.
+
+```{r}
+id_cols <- c("unique_id",
+             "database",
+             "log_number",
+             "project",
+             "gear_type",
+             "year",
+             "month",
+             "date",
+             "time",
+             "serial_number",
+             "station",
+             "region",
+             "species",
+             "depth",
+             "temp_surf",
+             "cond_surf",
+             "ppt_surf",
+             "temp_bott",
+             "cond_bott",
+             "ppt_bott",
+             "secchi",
+             "turbidity",
+             "total_body_weight",
+             "fork_length",
+             "gut_contents",
+             "total_gut_content_weight",
+             "total_number_of_prey",
+             "total_prey_weight",
+             "gut_fullness",
+             "fullness_rank",
+             "digestion_rank",
+             "debris_sand_silt_mud",
+             "unid_animal_material",
+             "unid_plant_material",
+             "stomach_gut_tissue",
+             "worm_pieces")
+
+```
+
+
+## Combine DOP data
+
+Left join the DOP diet data with presence/absence data.
+
+```{r}
+dop_full <- left_join(dop_diet, dop_pa) %>%
+    mutate(unique_id = paste(database, log_number, sep = "_"))
+```
+
+Quality control on the join. Check to see if returning data frame has same number of rows as the diet matrix.
+
+```{r}
+nrow(dop_full) == nrow(dop_diet)
+```
+
+Check that there are no duplicate log numbers
+
+```{r}
+length(which(duplicated(dop_full$log_number))) == 0
+```
+
+## Combine FLaSH data
+
+Define a function to do a full join but fill columns with 0s instead of NAs. This enables us to do a full join between the diet table and the empties table so that the species columns are filled with 0s for the empties.
+
+```{r}
+full_join0 <- function(x, y, fill = 0L, ...){
+    z <- full_join(x, y, ...)
+    new_cols <- setdiff(names(z), names(x))
+    z <- replace_na(z, setNames(as.list(rep(fill, length(new_cols))), new_cols))
+    z
+}
+```
+
+Do the join, and assign a temporary column for the diet source table, which will help us resolve issues with the presence/absence join later.
+
+```{r}
+flash_full <- full_join0(flash_diet, flash_empties) %>% 
+    mutate(diet_source = 1)
+```
+
+Check for duplicate log numbers
+
+```{r}
+length(which(duplicated(flash_full$log_number)))
+```
+
+Now join the diet matrix with the presence absence data.
+
+```{r}
+flash_full_em <- full_join(flash_full, flash_pa) 
+```
+
+The full join duplicates some rows because there are missing values in some columns (like the gut weight) on one side and real values (like 0 on the other).
+
+```{r}
+i_t <- which(duplicated(flash_full_em$log_number) | duplicated(flash_full_em$log_number, fromLast = T))
+
+
+id_cols_t <- id_cols[which(!(id_cols %in% c("region", "unique_id")))]
+
+flash_full_em[i_t, id_cols_t] %>% 
+    arrange(log_number) %>% 
+    datatable()
+
+```
+
+
+This loop finds duplicated log numbers, and replaces information in the row that comes from the diet side with any non NA values from the row that came from the presence absence side. after its done, we toss the row that came from the PA side since all of its information has been merged into the diet side row
+
+
+```{r}
+i <- which(duplicated(flash_full_em$log_number))
+log_dupes <- flash_full_em$log_number[i]
+
+toss_return <- c()
+for (z in seq_along(i)){
+    lo <- flash_full_em$log_number[i[z]]
+    t <- which(flash_full_em$log_number == lo)
+
+    keep <- t[which(flash_full_em$diet_source[t] == 1)]
+    toss <- t[which(is.na(flash_full_em$diet_source[t]))]
+
+    cols_transfer <- names(which(colSums(!is.na(flash_full_em[toss, ])) > 0))
+
+    flash_full_em[keep, cols_transfer] <- flash_full_em[toss, cols_transfer]
+
+    toss_return[z] <- toss
+}
+
+flash_full_em <- flash_full_em[-toss_return, ] %>%
+    select(-diet_source)  %>%
+    mutate(unique_id = paste(database, log_number, sep = "_"))
+```
+
+Examine the result for the problematic log numbers
+
+```{r}
+t <- which(flash_full_em$log_number %in% log_dupes)
+
+flash_full_em[t, ] %>% 
+    datatable()
+```
+
+
+Check that there are no duplicates.
+
+```{r}
+length(which(duplicated(flash_full_em$log_number))) == 0
+```
+
+## Merge DOP and FLaSH sources together
+
+```{r}
+all_names <- c(names(flash_full_em), names(dop_full))
+non_id_cols <- sort(all_names[which(!(all_names %in% id_cols))])
+```
+
+For the non id columns (the species columns) replace NA values with zero. Then replace the presence/absence column binary 0/1 with "Y" and "N." Reorder the columns, remove seconds from the time column, remove the region column, then rename a couple of columns.
+
+```{r}
+full_matrix <- bind_rows(flash_full_em, dop_full) %>%
+    mutate(across(.cols = non_id_cols,
+           ~ if_else(is.na(.), 0, .))) %>%
+    mutate(across(.cols = c(debris_sand_silt_mud,
+                            stomach_gut_tissue,
+                            unid_animal_material,
+                            unid_plant_material,
+                            worm_pieces),
+                  ~ if_else(. == 1, "Y", "N", missing = "N"))) %>%
+    mutate(across(.cols = c(total_number_of_prey,
+                            gut_fullness,
+                            total_prey_weight),
+                  ~ if_else(is.na(.), 0, ., missing = 0))) %>%
+    select(all_of(id_cols), all_of(non_id_cols)) %>%
+    mutate(time = gsub("*?:[0-9]{2}$", "", time)) %>%
+    select(-region) %>%
+    rename(study = database,
+           study_log_number = log_number)
+
+
+```
+
+Make sure unique id is indeed unique.
+
+```{r}
+length(which(duplicated(full_matrix$unique_id))) == 0
+```
+
+### Create real NA values
+
+This turns prey column values into NA during periods when these prey species were not counted.
+
+```{r}
+prey1 <- read.csv("raw_files/Prey Category Starts.csv") %>% 
+  clean_names() %>% 
+  select(-starts_with("end")) %>% 
+  pivot_longer(cols = starts_with("start"), names_to = c("db"), values_to = "log_start") %>% 
+  mutate(db = str_extract(db, "(flash)|(dop)"))
+
+prey2 <- read.csv("raw_files/Prey Category Starts.csv") %>% 
+  clean_names() %>% 
+  select(-starts_with("start")) %>% 
+  pivot_longer(cols = starts_with("end"), names_to = c("db"), values_to = "log_end") %>% 
+  mutate(db = str_extract(db, "(flash)|(dop)"))
+  
+prey <- full_join(prey1, prey2) %>% 
+  filter(log_start != 1 | !is.na(log_end)) %>% 
+  mutate(prey_category = tolower(gsub(" ", "_", prey_category)))
+
+```
+
+Only 4 of these prey categories actually appear in the dataset. Here are the ones that don't:
+
+```{r}
+i <- which(!(prey$prey_category %in% names(full_matrix)))
+
+prey$prey_category[i]
+```
+Compare to the list of prey categories that exist:
+
+```{r}
+sort(names(non_id_cols))
+```
+
+
+```{r}
+write.csv(full_matrix, "converted_files/diet-by-number-matrix.csv", row.names = F)
+```
+
+
+
+
+# Final QA/ QC:
+
+### All processed samples included in matrix
+
+
+Check that matrix includes all processed samples. Need to first read in the processed samples files and add in unique ID. Then do an anti join which only returns the samples that don't match
+
+```{r}
+flash_processed = read.csv("raw_files/FLaSH Processed Delta Smelt 2011 to 2020.csv") %>%
+  mutate(FLaSHLogNumber = as.character(FLaSHLogNumber)) %>% 
+  mutate(study = "FLaSH") %>% 
+  rename(study_log_number = FLaSHLogNumber) %>% 
+  mutate(study_log_number = str_pad(as.character(study_log_number), pad = "0", width = 4, side = "left")) %>% 
+  mutate(unique_id = paste(study, study_log_number, sep = "_"))
+  
+flash_qa = full_matrix %>% 
+  filter(study == "FLaSH")%>% 
+  anti_join(flash_processed, flash_qa, by = "unique_id") #anti join returns all rows from processed that doesn't match in the full matrix
+
+dop_processed = read.csv("raw_files/DOP Processed Delta Smelt to 2020.csv") %>% 
+  mutate(study = "DOP") %>%
+  mutate(DOPLogNumber = str_pad(as.character(DOPLogNumber), pad = "0", width = 4, side = "left")) %>% 
+  mutate(unique_id = paste(study, DOPLogNumber, sep = "_"))
+
+dop_qa = full_matrix %>% 
+  filter(study == "DOP")%>% 
+  anti_join(dop_processed, dop_qa, by = "unique_id")  
+  
+```
+
+
+### Check that fish with no gut contents have 0s in all prey columns
+
+```{r}
+no_guts <- full_matrix %>% 
+    filter(gut_contents == "N") %>% 
+    mutate(totals = rowSums(across(non_id_cols)))
+
+all(no_guts$totals == 0)
+```
+
+### Verify fish with gut contents have >0 total number of prey, and totals of all prey categories matches total number of prey. 
+
+This might be off for some fish that have only presence/ absence prey categories (e.g. Unid Animal Material)
+
+```{r}
+guts <- full_matrix %>% 
+    filter(gut_contents == "Y") %>% 
+    mutate(totals = rowSums(across(non_id_cols))) %>% 
+    arrange(totals)
+
+all(guts$totals == guts$total_number_of_prey) # total of all prey categories equals total number of prey
+
+all(guts$totals > 0) #all fish with gut contents have >0 total prey
+```
+
+Check which fish have 0 total prey and gut contents = y. 
+
+```{r}
+guts_0_prey <- guts %>% 
+    filter(totals == 0)
+
+datatable(guts_0_prey) 
+
+#Checked all of these and they're fish with unid animal material which could be legit prey, so keep the gut contents = y, and no prey. Kept ones that were legit prey, but unidentifiable, and made sure no fish with GC= y had only things like fish scales in their stomachs
+```
+
+Find which fish have the prey counts that don't add up to the total number of prey
+
+```{r}
+guts_mismatch <- guts %>% 
+    filter(totals != total_number_of_prey)
+
+datatable(guts_mismatch)
+```
+
+### Prepare the combined prey lengths file. 
+
+Read in prey lengths from both databases, add database and unique ID column like the full diet matrix
+
+```{r}
+dop_lengths = read_csv("raw_files/DOP Delta Smelt to 2020 Prey Lengths to Post.csv", show_col_types = FALSE) %>%
+    clean_names() %>%
+    mutate(study = "DOP") %>%
+    rename(study_log_number = dop_log_number) %>% 
+    rename(date = survey_date) %>% 
+    mutate(unique_id = paste(study, study_log_number, sep = "_"))
+
+flash_lengths = read.csv("raw_files/FLaSH Delta Smelt 2011-2020 Prey Lengths to Post.csv")   %>%
+    clean_names() %>%
+    mutate(station = as.character(station)) %>% 
+    mutate(study = "FLaSH") %>%
+    rename(study_log_number = f_la_sh_log_number) %>% 
+    mutate(study_log_number = str_pad(as.character(study_log_number), pad = "0", width = 4, side = "left")) %>% 
+    mutate(unique_id = paste(study, study_log_number, sep = "_"))
+
+```
+
+Combine both prey length files
+
+```{r}
+prey_lengths = rbind(dop_lengths, flash_lengths) %>% 
+  select(unique_id, study,study_log_number:prey_weight )
+
+write.csv(prey_lengths, "converted_files/delta-smelt-2011-2020-prey-lengths.csv", row.names = F)
+```
+
+
+## Prepare Station Look up File
+
+Have file with all IEP stations, coordinates and regions, but need to filter which are not in the diet matrix
+
+```{r}
+all_stations = read.csv("raw_files/station_lookup.csv")
+
+stations = semi_join(all_stations, full_matrix, by = c("project", "station")) #filtering which stations are only in the diet matrix
+
+#figuring out which stations are in the diet matrix, but not the stations file
+
+no_station_info = anti_join(full_matrix, all_stations, by = c("project", "station")) %>% 
+  select(project, station)
+
+unique(no_station_info)
+
+```
+

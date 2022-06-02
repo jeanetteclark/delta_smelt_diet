@@ -1,0 +1,107 @@
+PreyCategory,LifeStage,PreyCategoryDefinition,Phylum,Class,Order,Family,Genus,Species,WetWeight,WetWeightReference,StartDate,EndDate,Comments
+Annelid worms,All,,Annelida,,,,,,,"Weight not quantified. Found as parasite, not food.",,,
+Other rotifer,All,,Rotifera,Monogononta,Ploima,,,,0.0000036,POD Fish Guts,,,
+Chironomid larvae,Larvae,,Arthropoda,Insecta,Diptera,Chironomidae,,,0.000164,POD Fish Guts,,,
+Other insect larvae,Larvae,,Arthropoda,Insecta,,,,,0.0004904,POD Fish Guts,,,
+Unid fish,All,,Chordata,,,,,,,Based on length-weight equation. See LW equations tables,,,
+Fish eggs,All,,Chordata,,,,,,0.0000223,POD Fish Guts,,,
+Unid rotifer,All,,Rotifera,Monogononta,Ploima,,,,0.0000036,POD Fish Guts; From Other rotifer,,,
+Clams,All,,Mollusca,Bivalvia,,,,,0.0000334,POD Fish Guts,,,
+Terrestrial invertebrates,All,,Anthropoda,,,,,,0.0002366,POD Fish Guts,,,"Ants, spiders, flies with wings, etc."
+Ostracods,All,,Arthropoda,Ostacoda,,,,,0.0000481,POD Fish Guts,,,
+Barnacle nauplii,Nauplii,,Arthropoda,Cirripedia,Sessilia,,,,0.0000139,POD Fish Guts,,,
+Copepod nauplii,Nauplii,,Arthropoda,Copepoda,,,,,0.0000024,POD Fish Guts,,,
+Acanthomysis aspera,All,,Arthropoda,Malacostraca,Mysidacea,,Acanthomysis,aspera,,Based on length-weight equation. See LW equations tables,,,
+Hyperacanthomysis longirostris,All,,Arthropoda,Malacostraca,Mysidacea,,Hyperacanthomysis,longirostris,,Based on length-weight equation. See LW equations tables,,,
+Acanthomysis hwanhaiensis,All,,Arthropoda,Malacostraca,Mysidacea,,Acanthomysis,hwanhaiensis,,Based on length-weight equation. See LW equations tables,,,
+Acanthomysis macropsis,All,,Arthropoda,Malacostraca,Mysidacea,,Acanthomysis,macropsis,,Based on length-weight equation. See LW equations tables,,,
+Deltamysis homquistae,All,,Arthropoda,Malacostraca,Mysidacea,,Deltamysis,homquistae,,Based on length-weight equation. See LW equations tables,,,
+Neomysis kadiakensis,All,,Arthropoda,Malacostraca,Mysidacea,,Neomysis,kadiakensis,,Based on length-weight equation. See LW equations tables,,,
+Neomysis mercedis,All,,Arthropoda,Malacostraca,Mysidacea,,Neomysis,mercedis,,Based on length-weight equation. See LW equations tables,,,
+Cyclopoid copepodid,Copepodid,,Arthropoda,Copepoda,Cyclopoida,,,,0.0000137,Wet = Kimmerer (2006) ((0.75 ug C * 0.000001) / 0.42) / 0.13,,,
+Acanthocyclops spp,Adult,,Arthropoda,Copepoda,Cyclopoida,,Acanthocyclops,vernalis,0.0000382,POD Fish Guts,,,"No longer id'd, will now be marked as “Other Cyclopoid”."
+Oithona similis,Adult,,Arthropoda,Copepoda,Cyclopoida,,Oithona,similis,0.0000092,Wet = Kimmerer (2006) ((0.5 ug C * 0.000001) / 0.42) / 0.13,,,
+Oithona davisae,Adult,,Arthropoda,Copepoda,Cyclopoida,,Oithona,davisae,0.0000042,Wet = Kimmerer (2006) ((0.23 ug C * 0.000001) / 0.42) / 0.13,,,
+Limnoithona spp,Adult,,Arthropoda,Copepoda,Cyclopoida,,Limnothoina,spp,0.0000056,POD Fish Guts,,,
+Oithona spp,Adult,,Arthropoda,Copepoda,Cyclopoida,,Oithona,spp,0.0000066,Wet = Kimmerer (2006); Average from Oithona davisae and similis,,,
+UnID cyclopoid,Adult,,Arthropoda,Copepoda,Cyclopoida,,,,0.0000217,POD Fish Guts,,,
+Other cyclopoid,Adult,,Arthropoda,Copepoda,Cyclopoida,,,,0.0000444,POD Fish Guts,,,Separated Eucyclops and Diacyclops adults from this category 29 July 2020
+Acartia spp,Adult,,Arthropoda,Copepoda,Calanoida,,Acartia,spp,0.0000719,POD Fish Guts,,,
+Diaptomus spp,Adult,,Arthropoda,Copepoda,Calanoida,,Diaptomus,spp,0.0000733,Wet = Kimmerer (2006) ((4 ug C * 0.000001) / 0.42) / 0.13,,,
+Pseudodiaptomus spp,Adult,,Arthropoda,Copepoda,Calanoida,,Pseudodiaptomus,spp,0.0000194,POD Fish Guts,,,
+Eurytemora spp,Adult,,Arthropoda,Copepoda,Calanoida,,Eurytemora,affinis,0.0000403,Wet = Kimmerer (2006) ((2.2 ug C * 0.000001) / 0.42) / 0.13,,,
+Sinocalanus spp,Adult,,Arthropoda,Copepoda,Calanoida,,Sinocalanus,doerrii,0.0000707,POD Fish Guts,,,
+Osphranticum,Adult,,Arthropoda,Copepoda,Calanoida,,Osphranticum,labronectum,0.0000366,POD Fish Guts; From UnID calanoid,,,
+Acartiella sinensis,Adult,,Arthropoda,Copepoda,Calanoida,,Acartiella,sinensis,0.0000753,POD Fish Guts,,,
+Tortanus spp,Adult,,Arthropoda,Copepoda,Calanoida,,Tortanus,,0.0002196,POD Fish Guts,,,
+Acartia copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Acartia,,0.0000114,Wet = Kimmerer (2006) ((0.625 ug C * 0.000001) / 0.42) / 0.13,,,
+Calanoid copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,,,0.0000138,POD Fish Guts,,,
+Eurytemora copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Eurytemora,affinis,0.0000101,Wet = Kimmerer (2006) ((0.55 ug C * 0.000001) / 0.42) / 0.13,,,
+Pseudodiaptomus copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Pseudodiaptomus,,0.0000137,Wet = Kimmerer (2006) ((0.75 ug C * 0.000001) / 0.42) / 0.13,,,
+Pseudodiaptomus euryhalinus,Adult,,Arthropoda,Copepoda,Calanoida,,Pseudodiaptomus,euryhalinus,0.0000194,POD Fish Guts; from Pseudodiaptomus spp.,,,
+Diaptomus copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Diaptomus,,0.0000114,Wet = Kimmerer (2006) ((0.625 ug C * 0.000001) / 0.42) / 0.13,,,
+Acartiella copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Acartiella,,0.0000277,POD Fish Guts,,,
+Tortanus copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Tortanus,,0.0000301,POD Fish Guts,,,
+Tortanus dextrilobatus,Adult,,Arthropoda,Copepoda,Calanoida,,Tortanus,dextrilobatus,0.0002196,POD Fish Guts; from Tortanus,,,ID'd only to Tortanus spp.
+UnID calanoid,Adult,,Arthropoda,Copepoda,Calanoida,,,,0.0000276,POD Fish Guts,,,
+Other calanoid,Adult,,Arthropoda,Copepoda,Calanoida,,,,0.0000366,Wet = Kimmerer (2006) ((2 ug C * 0.000001) / 0.42) / 0.13,,,
+Tortanus discaudatus,Adult,,Arthropoda,Copepoda,Calanoida,,Tortanus,discaudatus,0.0002196,POD Fish Guts; from Tortanus,,,ID'd only to Tortanus spp.
+Harpacticoids,All,,Arthropoda,Copepoda,Harpacticoida,,,,0.0000227,POD Fish Guts,,,
+Bosmina spp,All,,Arthropoda,Branchiopoda,Cladocera,,Bosmina,longirostris,0.0000069,POD Fish Guts,,,
+Daphnia spp,All,,Arthropoda,Branchiopoda,Cladocera,,Daphnia,,0.0000504,POD Fish Guts,,,
+Diaphanosoma spp,All,,Arthropoda,Branchiopoda,Cladocera,,Diaphanosoma,,0.0000283,POD Fish Guts,,,
+Ceriodaphnia spp,All,,Arthropoda,Branchiopoda,Cladocera,,Ceriodaphnia,,0.0000323,POD Fish Guts,,,
+UnID cladocera,All,,Arthropoda,Branchiopoda,Cladocera,,,,0.0000225,POD Fish Guts,,,
+Other cladocera,All,,Arthropoda,Branchiopoda,Cladocera,,,,0.0000301,POD Fish Guts,,,Cladocera neonates count as individuals
+Unid mysids,All,,Arthropoda,Malacostraca,Mysidacea,,,,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Cumaceans,All,,Arthropoda,Malacostraca,Cumacea,,,,0.0003307,POD Fish Guts,,,"Stopped using after July 2020 and separted Cumaceans into Nippoleucon hinumensis, Other Cumaceans and Unid Cumaceans"
+Isopods,All,,Arthropoda,Malacostraca,Isopoda,,,,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Crab zoea,Larvae,,Arthropoda,Malacostraca,Decapoda,,,,0.0000296,POD Fish Guts,,,
+Palaemon,All,,Arthropoda,Malacostraca,Decapoda,Palaemonidae,Palaemon,macrodactylus,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Crangon spp,All,,Arthropoda,Malacostraca,Decapoda,Caridae,Crangon,,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Gammarus type,All,,Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,,,"See ""tbl_lookup_Zoo LW Equations""",,,Amphipod resembling the Gammarus type body plan- Stopped using- switched to Gammarus type July 2020
+Corophium type,All,,Arthropoda,Malacostraca,Amphipoda,Corophiidae,Corophium,,,"See ""tbl_lookup_Zoo LW Equations""",,,Amphipod resembling the Corophium body plan- Stopped using  July 2020. Updated to Corophium Type
+Other malacostraca,All,,Arthropoda,Malacostraca,Malacostraca,,,,0.000494,POD Fish Guts,,,
+Eurytemora nauplii,Nauplii,,Arthropoda,Copepoda,Calanoida,,Eurytemora,,0.0000018,Wet = Kimmerer (2006) ((0.1 ug C * 0.000001) / 0.42) / 0.13,,,
+Sinocalanus nauplii,Nauplii,,Arthropoda,Copepoda,Calanoida,,Sinocalanus,,0.0000027,POD Fish Guts,,,
+Pseudodiaptomus nauplii,Nauplii,,Arthropoda,Copepoda,Calanoida,,Pseudodiaptomus,,0.0000018,Wet = Kimmerer (2006) ((0.1 ug C * 0.000001) / 0.42) / 0.13,,,
+Sinocalanus copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,,Sinocalanus,,0.0000236,POD Fish Guts,,,
+Limnoithona copepodid,Copepodid,,Arthropoda,Copepoda,Cyclopoida,,Limnothoina,,0.0000005,Wet = Kimmerer (2006) ((0.0275 ug C * 0.000001) / 0.42) / 0.13,,,
+Oithona copepodid,Copepodid,,Arthropoda,Copepoda,Cyclopoida,,Oithona,spp,0.0000011,Wet = Kimmerer (2006) ((0.0575 ug C * 0.000001) / 0.42) / 0.13,,,"March 4, 2014 corrected carbon value 0.575 ug -> 0.0575 ug"
+Pseudodiaptomus forbesi,Adult,,Arthropoda,Copepoda,Calanoida,,Pseudodiaptomus,forbesi,0.0000549,Wet = Kimmerer (2006) ((3 ug C * 0.000001) / 0.42) / 0.13,,,
+Pseudodiaptomus marinus,Adult,,Arthropoda,Copepoda,Calanoida,,Pseudodiaptomus,marinus,0.0000733,Wet = Kimmerer (2006) ((4 ug C * 0.000001) / 0.42) / 0.13,,,
+Asplanchna,All,,Rotifera,Monogononta,Ploima,Asplanchnidae,Asplanchna,spp,0.0000036,POD Fish Guts; From Other rotifer,,,
+Synchaeta bicornis,All,,Rotifera,Monogononta,Ploima,Synchaetidae,Synchaeta,bicornis,0.0000018,Wet = Kimmerer (2006) ((0.1 ug C * 0.000001) / 0.42) / 0.13,,,
+Keratella,All,,Rotifera,Monogononta,Ploima,Brachionidae,Keratella,spp,0.0000013,POD Fish Guts,,,
+Polyarthra,All,,Rotifera,Monogononta,Ploima,Synchaetidae,Polyarthra,spp,0.0000005,Wet = Kimmerer (2006) ((0.03 ug C * 0.000001) / 0.42) / 0.13,,,
+Synchaeta,All,,Rotifera,Monogononta,Ploima,Synchaetidae,Synchaeta,spp,0.0000036,POD Fish Guts; From Other rotifer,,,
+Trichocerca,All,,Rotifera,Monogononta,Ploima,Trichocercidae,Trichocerca,spp,0.0000023,POD Fish Guts,,,
+Crab megalope,,,Arthropoda,Malacostraca,Decapoda,,,,,Not currently in database,,,
+Stomach/Gut Tissue,NA,,,,,,,,,Stomach is empty.,,,Number = 1 (presence only)
+Debris (sand/silt/mud),NA,,,,,,,,,Weight not quantified.,,,Number = 1 (presence only)
+UnID plant material,NA,,,,,,,,,Weight not quantified.,,,Number = 1 (presence only)
+UnID animal material,NA,,,,,,,,,Weight not quantified.,,,Number = 1 (presence only)
+Other zooplankton,All,,,,,,,,0.0000939,POD Fish Guts,,,
+Worm pieces,All,,,,,,,,0.0000139,POD Fish Guts; From barnacle nauplii (same size),,,Number = 1 (presence only)
+Unid copepod,All,,Arthropoda,Copepoda,,,,,0.0000247,POD Fish Guts; Mean of UnID calanoid and UnID cyclopoid,,,"March 4, 2014 corrected mean weight 29.7 -> 24.7"
+Tridentiger spp,All,,Chordata,Actinopterygii,Perciformes,Gobiidae,Tridentiger,spp,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Prickly Sculpin,All,,Chordata,Actinopterygii,Scorpaeniformes,Cottidae,Cottus,asper,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Striped Bass,All,,Chordata,Actinopterygii,Perciformes,Moronidae,Morone,saxatilis,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Tintinnid,All,,Ciliophora,Spirotrichea,Tintinnida,,,,0.0000002,Wet = Pace et al. (1998) (( 0.0197 ug DW * 0.000001) / 0.13),,,Added 25 May 2011
+Unid amphipod,All,,Arthropoda,Malacostraca,Amphipoda,,,,,"See ""tbl_lookup_Zoo LW Equations""",,,Added 9 Nov 2011
+Longfin Smelt,All,,Chordata,Actinopterygii,Osmeriformes,Osmeridae,Spirinchus,thaleichthys,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Pacific Herring,All,,Chordata,Actinopterygii,Clupeiformes,Clupeidae,Clupea,pallasii,,"See ""tbl_lookup_Zoo LW Equations""",,,
+White Croaker,All,,Chordata,Actinopterygii,Perciformes,Sciaenidae,Genyonemus,lineatus,,"See ""tbl_lookup_Zoo LW Equations""",,,
+Calanus pacificus,Adult,,Arthropoda,Copepoda,Calanoida,Calanidae,Calanus,pacificus,0.0015332,Wet = Kimmerer (2006) ((80 ug C * 0.000001) / 0.42) / 0.13,,,Added 08 July 2020
+Calanus pacificus copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,Calanidae,Calanus,pacificus,0.0003833,Wet = Kimmerer (2006) ((29.8 ug C * 0.000001) / 0.42) / 0.13,,,Added 08 July 2020
+Epilabidocera spp,Adult,,Arthropoda,Copepoda,Calanoida,Pontellidae,Epilabidocera,spp,,,,,Added 08 July 2020
+Epilabidocera copepodid,Copepodid,,Arthropoda,Copepoda,Calanoida,Pontellidae,Epilabidocera,spp,,,,,Added 08 July 2020
+Unid larval shrimp,Larvae,,Arthropoda,Malacostraca,Decapoda,,,,,,,,Added 08 July 2020
+Nippoleucon hinumensis,All,,Arthropoda,Malacostraca,Cumacea,"	Leuconidae",Nippoleucon,himumensis,0.0003307,POD Fish Guts,,,"Added 29 July 2020. Previously classified under ""Cumaceans"""
+Other cumacean,All,,Arthropoda,Malacostraca,Cumacea,,,,0.0003307,POD Fish Guts,,,Added 29 July 2020
+Unid cumacean,All,,Arthropoda,Malacostraca,Cumacea,,,,0.0003307,POD Fish Guts,,,Added 29 July 2020
+Eucyclops spp,Adult,,Arthropoda,Copepoda,Cyclopoida,,Eucyclops,spp,,,,,"Added 29 July 2020. Will stop using ""Other Cyclopoid"" for the adults of this group."
+Diacyclops spp,Adult,,Arthropoda,Copepoda,Cyclopoida,,,,,,,,"Added 29 July 2020. Will stop using ""Other Cyclopoid"" for the adults of this group."
+Corophium type,All,,Arthropoda,Malacostraca,Amphipoda,Corophiidae,Corophium,spp,,"See ""tbl_lookup_Zoo LW Equations""",,,Amphipod resembling the Corophium type body plan- Updated to add type  July 2020. Updated to Corophium Type
+Gammarus type,All,,Arthropoda,Malacostraca,Amphipoda,Gammaridae,Gammarus,spp,,"See ""tbl_lookup_Zoo LW Equations""",,,Amphipod resembling theGammarus type body plan- Updated to type July 2020
+Exopalaemon modestus,All,,Arthropoda,Malacostraca,Decapoda,Palaemonidae,Exopalaemon,modestus,,"See ""tbl_lookup_Zoo LW Equations""",,,Added 24 Mar 2014

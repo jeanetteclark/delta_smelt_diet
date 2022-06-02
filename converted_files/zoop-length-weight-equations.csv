@@ -1,0 +1,24 @@
+common_name,a,b,active,source,zoo_lwid_comments,notes
+Acanthomysis aspera,1.16e-5,3.06,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020; from H. longirostris,"Body Length (w/o telson) = mm, Wet weight = g",Updated Eqns in DB Aug2020
+Acanthomysis macropsis,1.16e-5,3.06,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020; from H. longirostris,NA,Updated Eqns in DB Aug2020
+Corophium,3.07e-5,2.631,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020,"Body Length (w/o telson) = mm, Wet weight = g",Updated Eqns in DB Aug2020
+Corophium Type,3.07e-5,2.631,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020,"Body Length (w/o telson) = mm, Wet weight = g",Updated Eqns in DB Aug2020
+Crangon,6.6e-6,3.125,TRUE,CDFW unpublished (Bay Study); C. franciscorum,"Total Length = mm, Wet weight = g",NA
+Deltamysis homquistae,1.07e-5,3.126,TRUE,CDFW unpublished (Orsi); from N. mercedis,"Body Length (w/o telson) = mm, Wet weight = g",NA
+Exopalaemon modestus,1.27e-5,3.035,TRUE,CDFW unpublished (Bay Study),"Total Length (w/o rostrum) = mm, Wet weight = g",NA
+Gammarus,1.63e-5,3.049,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020,"Body Length (w/o telson)  = mm, Wet weight = g (Ethanol)",Updated Eqns in DB Aug2020
+Gammarus Type,1.63e-5,3.049,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020,"Body Length (w/o telson)  = mm, Wet weight = g (Ethanol)",Updated Eqns in DB Aug2020
+Hyperacanthomysis longirostris,1.16e-5,3.06,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020,"Body Length (w/o telson) = mm, Wet weight = g",Updated Equations in DB Aug2020
+Isopods,1.127e-4,2.604,TRUE,CDFW unpublished (shokihaze goby guts),"Total Length = mm, Wet weight = g",NA
+Longfin smelt,1.7e-6,3.374,TRUE,CDFW unpublished (Length-Weight Study),"Fork Length = mm, Wet weight = g",NA
+Neomysis kadiakensis,1.07e-5,3.126,TRUE,CDFW unpublished (Orsi); from N. mercedis,"Body Length (w/o telson) = mm, Wet weight = g",NA
+Neomysis mercedis,1.07e-5,3.126,TRUE,CDFW unpublished (Orsi),"Body Length (w/o telson) = mm, Wet weight = dry weight (g) / 0.18",NA
+Pacific herring,4.1e-6,3.205,TRUE,CDFW unpublished (Length-Weight Study),"Fork Length = mm, Wet weight = g",NA
+Palaemon,7.6e-6,3.254,TRUE,CDFW unpublished (Bay Study),"Total Length (w/o rostrum) = mm, Wet weight = g",NA
+Prickly sculpin,2.43e-5,2.778,TRUE,BREACH II from Kimmerer et al. 2005,"Fork Length = mm, Wet weight = g",NA
+Striped bass,1.92e-5,2.92,TRUE,Delta Predators from Kimmerer et al. 2005,"Fork Length = mm, Wet weight = g",NA
+Tridentiger spp.,4.1e-6,3.305,TRUE,Slater (2005) thesis,"Fork Length = mm, Wet weight = g",NA
+Unid Amphipod,2.1e-5,2.896,TRUE,All Amphipods-FLaSH and DOP Fish Guts- Burdi et al 2020,"Body Length (w/o telson)  = mm, Wet weight = g",Updated Eqns in DB Aug2020
+Unid fish,2.43e-5,2.778,TRUE,Prickly sculpin; BREACH II from Kimmerer et al. 2005,"Fork Length = mm, Wet weight = g",NA
+Unid Mysids,1.16e-5,3.06,TRUE,FLaSH and DOP Fish Guts- Burdi et al 2020; from H. longirostris,"Body Length (w/o telson) = mm, Wet weight = g",Updated Eqns in DB Aug2020
+White croaker,1.72e-5,2.92,TRUE,CDFW unpublished (Length-Weight Study),"Fork Length = mm, Wet weight = g",NA
