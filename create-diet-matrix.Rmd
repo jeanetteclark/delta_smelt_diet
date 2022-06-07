@@ -35,7 +35,7 @@ dop_diet <- read_csv("raw_files/DOP Delta Smelt Diet by Number to Post.csv", sho
 Read in FLaSH diet data with same steps as above.
 
 ```{r}
-flash_diet <- read_csv("raw_files/FLaSH 2011 to 2020 Delta Smelt Diet by Number to Post.csv", show_col_types = F) %>%
+flash_diet <- read_csv("raw_files/FLaSH 2011 to 2020 Delta Smelt Diet by Number to Post.csv", show_col_types = F, guess_max = 1000000) %>%
     clean_names() %>%
     mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
     rename(log_number = f_la_sh_log_number) %>%
@@ -261,7 +261,8 @@ full_matrix <- bind_rows(flash_full_em, dop_full) %>%
     mutate(time = gsub("*?:[0-9]{2}$", "", time)) %>%
     select(-region) %>%
     rename(study = database,
-           study_log_number = log_number)
+           study_log_number = log_number) %>% 
+    arrange(unique_id)
 
 
 ```
@@ -291,22 +292,41 @@ prey2 <- read.csv("raw_files/Prey Category Starts.csv") %>%
   
 prey <- full_join(prey1, prey2) %>% 
   filter(log_start != 1 | !is.na(log_end)) %>% 
-  mutate(prey_category = tolower(gsub(" ", "_", prey_category)))
+  mutate(prey_category = tolower(gsub(" ", "_", prey_category))) #%>% 
+ # mutate(log_start = paste(db, str_pad(log_start, width = 4, pad = "0", side = "left"), sep = "_"),
+      #   log_end = paste(db, str_pad(log_end, width = 4, pad = "0", side = "left"), sep = "_")) %>% 
+#  mutate(log_start = ifelse(grepl("NA", log_start), NA, log_start),
+    #     log_end = ifelse(grepl("NA", log_end), NA, log_end)) %>% 
+#  select(-db)
 
 ```
 
 Only 4 of these prey categories actually appear in the dataset. Here are the ones that don't:
 
 ```{r}
-i <- which(!(prey$prey_category %in% names(full_matrix)))
+i <- which((prey$prey_category %in% names(full_matrix)))
 
-prey$prey_category[i]
+prey_in <- prey %>% 
+  filter(prey_category %in% prey$prey_category[i])
 ```
-Compare to the list of prey categories that exist:
 
 ```{r}
-sort(names(non_id_cols))
+for (i in 1:nrow(prey_in)){
+  
+  z <- which(tolower(full_matrix$study) == prey_in$db[i]  & (as.numeric(full_matrix$study_log_number) < prey_in$log_start[i] | 
+               as.numeric(full_matrix$study_log_number) > prey_in$log_end[i]))
+  
+  #print(paste(full_matrix$unique_id[z], prey_in$db[i], prey_in$log_start[i], prey_in$log_end[i], sep = ";"))
+  
+  c <- which(colnames(full_matrix) == prey_in$prey_category[i])
+  
+  full_matrix[z,c] <- NA
+  
+}
 ```
+
+
+
 
 
 ```{r}
