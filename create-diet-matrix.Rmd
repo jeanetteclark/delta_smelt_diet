@@ -62,6 +62,7 @@ flash_pa <- read_csv("raw_files/FLaSH Delta Smelt Presence-Absence Categories.cs
     clean_names() %>%
     mutate(database = "FLaSH") %>%
     mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
+    mutate(station = as.character(station)) %>% 
     rename(log_number = f_la_sh_log_number) %>%
     mutate(log_number = str_pad(as.character(log_number), pad = "0", width = 4, side = "left")) %>%
     mutate(worm_pieces = ifelse(is.na(worm_pieces), 0, 1))
@@ -76,7 +77,8 @@ flash_empties <- read_csv("raw_files/FLaSH 2011 to 2020 Delta Smelt Empties to P
     mutate(date = parse_date_time(date, orders = c("dmy", "mdy", "ymd"))) %>%
     rename(log_number = f_la_sh_log_number) %>%
     mutate(log_number = str_pad(as.character(log_number), pad = "0", width = 4, side =    "left")) %>%
-    mutate(serial_number = as.character(serial_number))
+    mutate(serial_number = as.character(serial_number)) %>% 
+    mutate(station = as.character(station))
 
 ```
 
@@ -273,7 +275,7 @@ Make sure unique id is indeed unique.
 length(which(duplicated(full_matrix$unique_id))) == 0
 ```
 
-### Create real NA values
+### Create real NA values for prey columns
 
 This turns prey column values into NA during periods when these prey species were not counted.
 
@@ -304,13 +306,22 @@ prey <- full_join(prey1, prey2) %>%
 Only 4 of these prey categories actually appear in the dataset. Here are the ones that don't:
 
 ```{r}
-i <- which((prey$prey_category %in% names(full_matrix)))
+i <- which(!(prey$prey_category %in% names(full_matrix)))
 
-prey_in <- prey %>% 
-  filter(prey_category %in% prey$prey_category[i])
+prey$prey_category[i] #these categories aren't in delta smelt stomachs, but will be helpful later for other species
+
 ```
+Compare the list prey categories that exist to see if there are any that don't match
 
 ```{r}
+sort(names(non_id_cols))
+```
+Add in the NAs for the categories that exist in the full matrix
+
+```{r}
+prey_in <- prey %>% 
+  filter(prey_category %in% prey$prey_category[i])
+
 for (i in 1:nrow(prey_in)){
   
   z <- which(tolower(full_matrix$study) == prey_in$db[i]  & (as.numeric(full_matrix$study_log_number) < prey_in$log_start[i] | 
@@ -326,7 +337,7 @@ for (i in 1:nrow(prey_in)){
 ```
 
 
-
+Make csv of final diet by number matrix
 
 
 ```{r}
@@ -438,7 +449,8 @@ Combine both prey length files
 
 ```{r}
 prey_lengths = rbind(dop_lengths, flash_lengths) %>% 
-  select(unique_id, study,study_log_number:prey_weight )
+  select(unique_id, study,study_log_number:prey_weight ) %>% 
+  filter(unique_id %in% full_matrix$unique_id) #only include lengths for ids in full matrix
 
 write.csv(prey_lengths, "converted_files/delta-smelt-2011-2020-prey-lengths.csv", row.names = F)
 ```
@@ -449,16 +461,24 @@ write.csv(prey_lengths, "converted_files/delta-smelt-2011-2020-prey-lengths.csv"
 Have file with all IEP stations, coordinates and regions, but need to filter which are not in the diet matrix
 
 ```{r}
-all_stations = read.csv("raw_files/station_lookup.csv")
+all_stations = read.csv("raw_files/IEP Stations.csv")
 
 stations = semi_join(all_stations, full_matrix, by = c("project", "station")) #filtering which stations are only in the diet matrix
 
 #figuring out which stations are in the diet matrix, but not the stations file
 
-no_station_info = anti_join(full_matrix, all_stations, by = c("project", "station")) %>% 
+no_station_info = anti_join(full_matrix, stations, by = c("project", "station")) %>% 
   select(project, station)
 
 unique(no_station_info)
 
 ```
+
+Create station look-up csv
+
+```{r}
+write.csv(stations, "converted_files/diet_station_lookup.csv", row.names = F)
+```
+
+
 

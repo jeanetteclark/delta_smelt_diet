@@ -321,7 +321,6 @@
 "DOP_0162","DOP","0162","EDSM","10-Sep-18","19-07-LSSC02","Delta Smelt","0111","Hyperacanthomysis longirostris",NA,2.6,"ED",NA
 "DOP_0166","DOP","0166","EDSM","11-Sep-18","19-07-LSSC06","Delta Smelt","0120","Hyperacanthomysis longirostris",NA,1.3,NA,NA
 "DOP_0178","DOP","0178","EDSM","27-Sep-18","19-09-LSSC02","Delta Smelt","0132","Unid Mysids",NA,1.4,"ED",NA
-"DOP_0182","DOP","0182","EDSM","04-Oct-18","19-10-LSSC01","Delta Smelt","0136","Hyperacanthomysis longirostris",NA,1.5,NA,NA
 "DOP_0183","DOP","0183","EDSM","04-Oct-18","19-10-LSSC01","Delta Smelt","0137","Unid Mysids",NA,2.9,"ED",NA
 "DOP_0184","DOP","0184","EDSM","04-Oct-18","19-10-LSSC01","Delta Smelt","0138","Hyperacanthomysis longirostris",NA,4.1,"ED",NA
 "DOP_0186","DOP","0186","EDSM","09-Oct-18","19-11-LSSC06","Delta Smelt","0140","Unid Mysids",NA,2.9,"M",NA
@@ -434,11 +433,6 @@
 "DOP_0347","DOP","0347","EDSM","28-Oct-19","20-14-LSR01","Delta Smelt","0206","Unid Amphipod",NA,1.5,"Y",NA
 "DOP_0348","DOP","0348","EDSM","22-Oct-19","20-13-HB01","Delta Smelt","0339","Unid Mysids",NA,2.9,"ED",NA
 "DOP_0349","DOP","0349","EDSM","08-Jul-19","19-50-LSSC02","Delta Smelt","0340","Hyperacanthomysis longirostris",NA,1.6,"U",NA
-"DOP_0350","DOP","0350","EDSM","09-Jul-19","19-50-LSSC05","Delta Smelt","0341","Unid Mysids",NA,1.6,"U",NA
-"DOP_0350","DOP","0350","EDSM","09-Jul-19","19-50-LSSC05","Delta Smelt","0341","Unid Mysids",NA,1.4,"ED",NA
-"DOP_0350","DOP","0350","EDSM","09-Jul-19","19-50-LSSC05","Delta Smelt","0341","Unid Mysids",NA,1.4,"ED",NA
-"DOP_0350","DOP","0350","EDSM","09-Jul-19","19-50-LSSC05","Delta Smelt","0341","Unid Mysids",NA,2,"U",NA
-"DOP_0350","DOP","0350","EDSM","09-Jul-19","19-50-LSSC05","Delta Smelt","0341","Unid Mysids",NA,1.6,"U",NA
 "DOP_0353","DOP","0353","EDSM","10-Sep-19","20-07-LSSC03","Delta Smelt","0475","Hyperacanthomysis longirostris",NA,2,NA,NA
 "DOP_0355","DOP","0355","EDSM","15-Oct-19","20-12-LSSC01","Delta Smelt","0577","Hyperacanthomysis longirostris",NA,1.9,"Y",NA
 "DOP_0355","DOP","0355","EDSM","15-Oct-19","20-12-LSSC01","Delta Smelt","0577","Unid Mysids",NA,5.7,"ED",NA
@@ -452,43 +446,9 @@
 "DOP_0427","DOP","0427","EDSM","06-Jul-20","20-50-LSSC02","Delta Smelt","0226","Corophium type","juvenile Corophium",2,NA,NA
 "DOP_0428","DOP","0428","EDSM","07-Jul-20","20-50-LSSC05","Delta Smelt","0227","Hyperacanthomysis longirostris",NA,5.5,NA,NA
 "DOP_0437","DOP","0437","EDSM","21-Jul-20","20-52-GB01","Delta Smelt","0479","Unid Mysids",NA,1.4,"ED",NA
-"DOP_0439","DOP","0439","EDSM","06-Jul-20","20-50-LSSC02","Delta Smelt","0481","Unid Amphipod","Unid amphipod",1,"S",NA
 "DOP_0441","DOP","0441","EDSM","11-Aug-20","21-03-GB01","Delta Smelt","0484","Hyperacanthomysis longirostris",NA,1.5,"G",NA
 "DOP_0441","DOP","0441","EDSM","11-Aug-20","21-03-GB01","Delta Smelt","0484","Hyperacanthomysis longirostris",NA,1.5,NA,NA
 "DOP_0442","DOP","0442","EDSM","02-Jun-20","20-45-SM07","Delta Smelt","0485","Unid Amphipod","Unid amphipod",1,"Y",NA
-"DOP_0447","DOP","0447","EDSM","04-May-21","21-41-LSSC07","Delta Smelt","L0372","Unid Mysids",NA,NA,NA,NA
-"DOP_0447","DOP","0447","EDSM","04-May-21","21-41-LSSC07","Delta Smelt","L0372","Unid Mysids",NA,NA,NA,NA
-"DOP_0456","DOP","0456","EDSM","17-Dec-21","22-20-RV05","Delta Smelt","S105","Gammarus type","Crangonyx sp.",3,NA,0.00059
-"DOP_0456","DOP","0456","EDSM","17-Dec-21","22-20-RV05","Delta Smelt","S105","Gammarus type","Hyalella sp.",2.6,NA,0.00059
-"DOP_0456","DOP","0456","EDSM","17-Dec-21","22-20-RV05","Delta Smelt","S105","Gammarus type","Crangonyx sp.",4.1,NA,0.00107
-"DOP_0456","DOP","0456","EDSM","17-Dec-21","22-20-RV05","Delta Smelt","S105","Gammarus type","G. daiberi",4.6,NA,0.00124
-"DOP_0456","DOP","0456","EDSM","17-Dec-21","22-20-RV05","Delta Smelt","S105","Gammarus type","Crangonyx sp.",4.1,NA,0.00086
-"DOP_0456","DOP","0456","EDSM","17-Dec-21","22-20-RV05","Delta Smelt","S105","Corophium type",NA,3.1,NA,0.00053
-"DOP_0457","DOP","0457","EDSM","17-Dec-21","22-20-RV02","Delta Smelt","S106","Gammarus type","Crangonyx sp.",NA,NA,NA
-"DOP_0461","DOP","0461","EDSM","28-Dec-21","22-22-RV02","Delta Smelt","S111","Gammarus type","Hyalella sp.",3,NA,NA
-"DOP_0463","DOP","0463","EDSM","28-Dec-21","22-22-RV03","Delta Smelt","S112","Gammarus type","Hyalella sp.",1.8,NA,NA
-"DOP_0463","DOP","0463","EDSM","28-Dec-21","22-22-RV03","Delta Smelt","S112","Gammarus type","Hyalella sp.",2.8,NA,NA
-"DOP_0463","DOP","0463","EDSM","28-Dec-21","22-22-RV03","Delta Smelt","S112","Corophium type","A. spinicorne",3,NA,3e-04
-"DOP_0463","DOP","0463","EDSM","28-Dec-21","22-22-RV03","Delta Smelt","S112","Corophium type","A. spinicorne",3.3,NA,NA
-"DOP_0463","DOP","0463","EDSM","28-Dec-21","22-22-RV03","Delta Smelt","S112","Gammarus type","Hyalella sp.",3,NA,0.00042
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",1.8,NA,NA
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",2.7,NA,NA
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",3.2,NA,0.00033
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",1.9,NA,NA
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",2.2,NA,0.00016
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",3.3,NA,0.00078
-"DOP_0464","DOP","0464","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S114","Gammarus type","Hyalella sp.",3.3,NA,0.00084
-"DOP_0468","DOP","0468","EDSM","07-Feb-22","22-28-LSR01","Delta Smelt","S118","Prickly sculpin",NA,NA,NA,NA
-"DOP_0469","DOP","0469","EDSM","12-Jan-22","22-24-LSSC03","Delta Smelt","S119","Gammarus type","Crangonyx sp.",5,NA,0.00105
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Gammarus type","Hyalella sp.",3.1,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Gammarus type","Hyalella sp.",3.5,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Gammarus type","Hyalella sp.",3.2,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Unid Amphipod",NA,NA,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Unid Amphipod",NA,NA,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Unid Amphipod",NA,NA,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Unid Amphipod",NA,NA,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Unid Amphipod",NA,NA,NA,NA
-"DOP_0472","DOP","0472","EDSM","16-Jan-22","Salv","Delta Smelt","S401","Unid Amphipod",NA,NA,NA,NA
 "FLaSH_0003","FLaSH","0003","STN","8/24/2011 0:00","501","delta smelt","1005","Hyperacanthomysis longirostris","",1.8,"",NA
 "FLaSH_0003","FLaSH","0003","STN","8/24/2011 0:00","501","delta smelt","1005","Corophium","",0.8,"",NA
 "FLaSH_0003","FLaSH","0003","STN","8/24/2011 0:00","501","delta smelt","1005","Unid Amphipod","Unid amphipod",0.8,"G",NA
@@ -6572,15 +6532,15 @@
 "FLaSH_1890","FLaSH","1890","GES","10/21/2014 0:00","705","delta smelt","321","Gammarus","",3.2,"",NA
 "FLaSH_1893","FLaSH","1893","GES","10/21/2014 0:00","705","delta smelt","324","Corophium","",2,"",NA
 "FLaSH_1894","FLaSH","1894","GES","10/21/2014 0:00","705","delta smelt","325","Hyperacanthomysis longirostris","",5.8,"",NA
-"FLaSH_1896","FLaSH","1896","GES","12/2/2014 0:00","704/705","delta smelt","327","Corophium","",2.4,"M",NA
-"FLaSH_1898","FLaSH","1898","GES","12/2/2014 0:00","704/705","delta smelt","329","Hyperacanthomysis longirostris","",4.7,"ED",NA
-"FLaSH_1904","FLaSH","1904","GES","12/2/2014 0:00","704/705","delta smelt","335","Corophium","juvenile Corophium",1.4,"",NA
+"FLaSH_1896","FLaSH","1896","GES","12/2/2014 0:00","706","delta smelt","327","Corophium","",2.4,"M",NA
+"FLaSH_1898","FLaSH","1898","GES","12/2/2014 0:00","706","delta smelt","329","Hyperacanthomysis longirostris","",4.7,"ED",NA
+"FLaSH_1904","FLaSH","1904","GES","12/2/2014 0:00","706","delta smelt","335","Corophium","juvenile Corophium",1.4,"",NA
 "FLaSH_1907","FLaSH","1907","GES","12/2/2014 0:00","797","delta smelt","338","Unid Mysids","",3,"ED",NA
 "FLaSH_1907","FLaSH","1907","GES","12/2/2014 0:00","797","delta smelt","338","Corophium","juvenile Corophium",1.3,"",NA
 "FLaSH_1907","FLaSH","1907","GES","12/2/2014 0:00","797","delta smelt","338","Corophium","juvenile Corophium",1.3,"G",NA
-"FLaSH_1917","FLaSH","1917","GES","8/21/2014 0:00","704/705","delta smelt","17","Unid Mysids","",0.8,"ED",NA
-"FLaSH_1917","FLaSH","1917","GES","8/21/2014 0:00","704/705","delta smelt","17","Hyperacanthomysis longirostris","",3.3,"ED",NA
-"FLaSH_1921","FLaSH","1921","GES","8/21/2014 0:00","704/705","delta smelt","28","Corophium","Unid Corophium",2.4,"Y",NA
+"FLaSH_1917","FLaSH","1917","GES","8/21/2014 0:00","706","delta smelt","17","Unid Mysids","",0.8,"ED",NA
+"FLaSH_1917","FLaSH","1917","GES","8/21/2014 0:00","706","delta smelt","17","Hyperacanthomysis longirostris","",3.3,"ED",NA
+"FLaSH_1921","FLaSH","1921","GES","8/21/2014 0:00","706","delta smelt","28","Corophium","Unid Corophium",2.4,"Y",NA
 "FLaSH_1956","FLaSH","1956","GES","8/21/2014 0:00","704","delta smelt","105","Hyperacanthomysis longirostris","",2.6,"M",NA
 "FLaSH_1964","FLaSH","1964","GES","8/21/2014 0:00","704","delta smelt","122","Unid Mysids","",2.6,"",NA
 "FLaSH_1969","FLaSH","1969","GES","8/21/2014 0:00","797","delta smelt","153","Hyperacanthomysis longirostris","",1.9,"",NA
