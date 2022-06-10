@@ -306,16 +306,14 @@ prey <- full_join(prey1, prey2) %>%
 Only 4 of these prey categories actually appear in the dataset. Here are the ones that don't:
 
 ```{r}
-i <- which(!(prey$prey_category %in% names(full_matrix)))
+i <- which((prey$prey_category %in% names(full_matrix)))
 
 prey$prey_category[i] #these categories aren't in delta smelt stomachs, but will be helpful later for other species
 
 ```
 Compare the list prey categories that exist to see if there are any that don't match
 
-```{r}
-sort(names(non_id_cols))
-```
+
 Add in the NAs for the categories that exist in the full matrix
 
 ```{r}
@@ -327,7 +325,7 @@ for (i in 1:nrow(prey_in)){
   z <- which(tolower(full_matrix$study) == prey_in$db[i]  & (as.numeric(full_matrix$study_log_number) < prey_in$log_start[i] | 
                as.numeric(full_matrix$study_log_number) > prey_in$log_end[i]))
   
-  #print(paste(full_matrix$unique_id[z], prey_in$db[i], prey_in$log_start[i], prey_in$log_end[i], sep = ";"))
+  print(paste(full_matrix$unique_id[z], prey_in$db[i], prey_in$log_start[i], prey_in$log_end[i], sep = ";"))
   
   c <- which(colnames(full_matrix) == prey_in$prey_category[i])
   
